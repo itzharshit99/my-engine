@@ -1,13 +1,15 @@
 import React from "react";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Login from "../screens/Login.jsx";
+import Register from "../screens/Register.jsx";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<div>Home</div>}/>
-        <Route path="/login" element={<div>login</div>}/>
-        <Route path="/register" element={<div>register</div>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
     </BrowserRouter>
   );
