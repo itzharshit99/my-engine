@@ -5,6 +5,7 @@ import connect from './db/db.js';
 import userRoutes from "./routes/user.route.js";
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import projectRoutes from './routes/project.route.js';
 connect();
 const app = express();
 //middlewares
@@ -16,6 +17,7 @@ app.use(cookieParser());
 
 //routes
 app.use('/users',userRoutes);
+app.use('/projects',projectRoutes);
 app.get('/',(req,res)=>{
   res.send("hello");
 
