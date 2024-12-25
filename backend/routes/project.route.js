@@ -22,4 +22,8 @@ router.put(
   authMiddleWare.authUser,
   projectController.addUsertoProject
 );
+router.get('/get-project/:projectId',
+    authMiddleWare.authUser,
+    projectController.getProjectById
+)
 export default router;
